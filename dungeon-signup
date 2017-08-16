@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta name="author" content="Anton Kojin">
+  <meta name="description" content="Sign up">
+  <link rel="shortcut icon" href="warrior.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="dungeon.css"
+  <meta property="og:image" content="troll.bin">
+  <meta property="og:description" content="A simple dungeon game">
+  <meta property="og:title" content="Dungeon">
+  <title>Dungeon</title>
+  <html lang="it-IT"
+</head>
+<body>
+    <section class="login-container">
+      <form class="login">
+    <h1>Sign up</h1>
+    <aside>
+      <img src="warrior.jpg" alt="Avatar" class="avatar" style="width140px;height:180px;">
+    </aside>
+    <form method="post" action="index.html">
+    <p><input type="text" class="item" value="" placeholder="Insert your E-mail" autofocus></p>
+    <p><input type="text" class="item"
+      value="" placeholder="Choose a username"></p>
+    <p><input type="password" class="item"
+      value="" placeholder="Choose a password"></p>
+    <p class="submit"><input type="submit" name="commit" value="Sign me up!">
+      <p class="sign-up">
+        or login <a href="index.html">here</a></p>
+  </form>
+
+  </section>
+
+
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Anton Kojin">
+    <meta name="description" content="A simple dungeon game">
+    <link rel="shortcut icon" href="warrior.jpg" type="image/x-icon">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="dungeon4.css"
+    <meta property="og:image" content="troll.bin">
+    <meta property="og:description" content="A simple dungeon game">
+    <meta property="og:title" content="Dungeon">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dungeon</title>
+    <html lang="it-IT"
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="warrior.jpg">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Dungeon Game">
+    <link rel="apple-touch-icon-precomposed" href="warrior.jpg">
+
+
+
+
+
+      <!-- Favicon and touch icons -->
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+
+<body
+
+
+
+
+  <div id="container" class="width">
+
+    <!-- navbar - responsive??-->
+
+      <nav class="navbar width fixed-top navbar-expand-lg my-nav nav-fill justify-content-end" id="logout">
+
+
+          <button class="btn my-btn" type="button">logout</button>
+
+
+      </nav>
+
+
+      <!-- grid container - all the page code apart from the navbar is inside this -->
+
+      <div class="container my-content">
+
+          <div class="row">
+
+              <div class="col">
+
+                  <h1>
+                  Create your character
+                  </h1>
+
+              </div>
+
+          </div>
+
+          <!-- game description and rules. first row of the grid, one autosized column. the following row for any further instructions -->
+
+          <div class="row my-text">
+
+              <div class="col">
+
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+              </div>
+
+          </div>
+
+            <div class="row my-text">
+
+              <div class="col-lg">
+
+                  <p>
+                      This is because you give Morty Smith bad grades, bitch!
+                  </p>
+
+              </div>
+
+          </div>
+
+          <!-- button to launch the dice, javascript code to hide this to display the following element -->
+
+
+          <div class="row justify-content-center go-on">
+
+              <div class="col-lg-10">
+
+                <button class="btn btn-block my-dices part1" type=button>
+                Play!
+                </button>
+
+              </div>
+
+          </div>
+
+                <!-- this displays the generated dices from the APIs in radio buttons -->
+
+
+                <div class="my-choice container part2" hidden>
+
+                      <div class="row my-text">
+
+                          <div class="col-lg justify-content-center">
+
+                            <!-- Strenght value -->
+
+                              <button class="btn btn-block my-item" type="button">
+
+                              Strenght
+
+                          </button>
+
+                          </div>
+
+                            <div class="btn-group col-lg my-align"data-toggle="buttons">
+
+
+                                  <label class="btn btn-secondary my-radio">
+                                      <input type="radio" name="options" id="option1" autocomplete="off">
+
+                                      <!-- images of the dices are to be replaces in javascript with the ones displaying the correct values -->
+
+                                        <img class="onedice" src="./icons/1.png"/>
+                                        <img class="onedice" src="./icons/2.png"/>
+                                        <img class="onedice" src="./icons/3.png"/>
+                                  </label>
+                                  <label class="btn btn-secondary my-radio">
+                                      <input type="radio" name="options" id="option2" autocomplete="off">
+                                      <img class="onedice" src="./icons/1.png"/>
+                                      <img class="onedice" src="./icons/2.png"/>
+                                      <img class="onedice" src="./icons/3.png"/>
+                                  </label>
+                                  <label class="btn btn-secondary my-radio">
+                                      <input type="radio" name="options" id="option3" autocomplete="off">
+                                      <img class="onedice" src="./icons/1.png"/>
+                                      <img class="onedice" src="./icons/2.png"/>
+                                      <img class="onedice" src="./icons/3.png"/>
+                                  </label>
+                                  <label class="btn btn-secondary my-radio">
+                                      <input type="radio" name="options" id="option4" autocomplete="off">
+                                      <img class="onedice" src="./icons/1.png"/>
+                                      <img class="onedice" src="./icons/2.png"/>
+                                      <img class="onedice" src="./icons/3.png"/>
+                                  </label>
+                                  <label class="btn btn-secondary my-radio">
+                                      <input type="radio" name="options" id="option5" autocomplete="off">
+                                      <img class="onedice" src="./icons/1.png"/>
+                                      <img class="onedice" src="./icons/2.png"/>
+                                      <img class="onedice" src="./icons/3.png"/>
+                                  </label>
+
+
+
+                            </div>
+
+                          </div>
+
+
+
+
+                      <div class="row my-text">
+
+                          <div class="col-lg">
+
+                            <!-- Constitution value -->
+                              <button class="btn btn-block my-item" type="button">
+
+                              Constitution
+
+                              </button>
+                          </div>
+
+                          <div class="btn-group col-lg my-align"data-toggle="buttons">
+
+
+                                <label class="btn btn-secondary my-radio">
+                                    <input type="radio" name="options" id="option1" autocomplete="off">
+                                    <img class="onedice" src="./icons/1i.png"/>
+                                    <img class="onedice" src="./icons/2i.png"/>
+                                    <img class="onedice" src="./icons/3i.png"/>
+                                </label>
+                                <label class="btn btn-secondary my-radio">
+                                    <input type="radio" name="options" id="option2" autocomplete="off">
+                                    <img class="onedice" src="./icons/1i.png"/>
+                                    <img class="onedice" src="./icons/2i.png"/>
+                                    <img class="onedice" src="./icons/3i.png"/>
+                                </label>
+                                <label class="btn btn-secondary my-radio">
+                                    <input type="radio" name="options" id="option3" autocomplete="off">
+                                    <img class="onedice" src="./icons/1i.png"/>
+                                    <img class="onedice" src="./icons/2i.png"/>
+                                    <img class="onedice" src="./icons/3i.png"/>
+                                </label>
+                                <label class="btn btn-secondary my-radio">
+                                    <input type="radio" name="options" id="option4" autocomplete="off">
+                                    <img class="onedice" src="./icons/1i.png"/>
+                                    <img class="onedice" src="./icons/2i.png"/>
+                                    <img class="onedice" src="./icons/3i.png"/>
+                                </label>
+                                <label class="btn btn-secondary my-radio">
+                                    <input type="radio" name="options" id="option5" autocomplete="off">
+                                    <img class="onedice" src="./icons/1i.png"/>
+                                    <img class="onedice" src="./icons/2i.png"/>
+                                    <img class="onedice" src="./icons/3i.png"/>
+                                </label>
+
+
+
+                          </div>
+
+                        </div>
+
+
+
+                  <div class="row my-text">
+
+                      <div class="col">
+
+                        <!-- Dexterity value -->
+                        <button class="btn btn-block my-item" type="button">
+
+                            Dexterity
+
+                        </button>
+                      </div>
+
+                      <div class="btn-group col-lg my-align"data-toggle="buttons">
+
+
+                        <label class="btn btn-secondary my-radio">
+                            <input type="radio" name="options" id="option1" autocomplete="off">
+                              <img class="onedice" src="./icons/1.png"/>
+                              <img class="onedice" src="./icons/2.png"/>
+                              <img class="onedice" src="./icons/3.png"/>
+                        </label>
+                        <label class="btn btn-secondary my-radio">
+                            <input type="radio" name="options" id="option2" autocomplete="off">
+                            <img class="onedice" src="./icons/1.png"/>
+                            <img class="onedice" src="./icons/2.png"/>
+                            <img class="onedice" src="./icons/3.png"/>
+                        </label>
+                        <label class="btn btn-secondary my-radio">
+                            <input type="radio" name="options" id="option3" autocomplete="off">
+                            <img class="onedice" src="./icons/1.png"/>
+                            <img class="onedice" src="./icons/2.png"/>
+                            <img class="onedice" src="./icons/3.png"/>
+                        </label>
+                        <label class="btn btn-secondary my-radio">
+                            <input type="radio" name="options" id="option4" autocomplete="off">
+                            <img class="onedice" src="./icons/1.png"/>
+                            <img class="onedice" src="./icons/2.png"/>
+                            <img class="onedice" src="./icons/3.png"/>
+                        </label>
+                        <label class="btn btn-secondary my-radio">
+                            <input type="radio" name="options" id="option5" autocomplete="off">
+                            <img class="onedice" src="./icons/1.png"/>
+                            <img class="onedice" src="./icons/2.png"/>
+                            <img class="onedice" src="./icons/3.png"/>
+                        </label>
+
+
+
+
+                      </div>
+
+                    </div>
+
+
+
+                  <div class="row my-text">
+
+                      <div class="col">
+
+                        <!-- Intellect value -->
+
+                        <button class="btn btn-block my-item" type="button">
+
+                            Intellect
+
+                        </button>
+                      </div>
+
+                      <div class="btn-group col-lg my-align"data-toggle="buttons">
+
+
+
+                            <label class="btn btn-secondary my-radio">
+                                  <input type="radio" name="options" id="option1" autocomplete="off">
+                                  <img class="onedice" src="./icons/1i.png"/>
+                                  <img class="onedice" src="./icons/2i.png"/>
+                                  <img class="onedice" src="./icons/3i.png"/>
+                              </label>
+                              <label class="btn btn-secondary my-radio">
+                                  <input type="radio" name="options" id="option2" autocomplete="off">
+                                  <img class="onedice" src="./icons/1i.png"/>
+                                  <img class="onedice" src="./icons/2i.png"/>
+                                  <img class="onedice" src="./icons/3i.png"/>
+                              </label>
+                              <label class="btn btn-secondary my-radio">
+                                  <input type="radio" name="options" id="option3" autocomplete="off">
+                                      <img class="onedice" src="./icons/1i.png"/>
+                                      <img class="onedice" src="./icons/2i.png"/>
+                                      <img class="onedice" src="./icons/3i.png"/>
+                                  </label>
+                                  <label class="btn btn-secondary my-radio">
+                                    <input type="radio" name="options" id="option4" autocomplete="off">
+                                    <img class="onedice" src="./icons/1i.png"/>
+                                    <img class="onedice" src="./icons/2i.png"/>
+                                    <img class="onedice" src="./icons/3i.png"/>
+                                </label>
+                                <label class="btn btn-secondary my-radio">
+                                    <input type="radio" name="options" id="option5" autocomplete="off">
+                                    <img class="onedice" src="./icons/1i.png"/>
+                                    <img class="onedice" src="./icons/2i.png"/>
+                                    <img class="onedice" src="./icons/3i.png"/>
+                                </label>
+
+
+
+                      </div>
+
+                  </div>
+
+                  <div class="row justify-content-center go-on">
+
+                      <div class="col-lg-10">
+
+                        <button class="btn btn-block my-play" type=button>
+                        Play!
+                        </button>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="dungeon4script.js"></script>
+
+
+</body>

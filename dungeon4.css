@@ -1,0 +1,438 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+
+/* background of the whole page */
+html {
+
+  background: url("./cave-light-blue.bin") no-repeat center center fixed !important;
+  background-size: cover;
+  -webkit-background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  height: 100%;
+
+}
+/* container of the whole page */
+
+.width {
+
+  max-width: auto;
+  margin: 0,auto;
+  background: none;
+
+
+}
+
+.clear {
+
+  clear: both;
+}
+
+
+
+.my-nav {
+
+    background-image: none;
+    background-color: rgba(60, 60, 60, 0.50) !important;
+    height: 30px;
+    width: auto;
+
+}
+
+a {
+
+  color: darkred !important;
+}
+
+/* logout button style */
+
+.my-btn {
+
+    color: gray;
+    border-radius: 0%;
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    align-item= flex-end;
+
+
+
+}
+
+/* logout button on mouse hover */
+.my-btn:hover {
+
+  color: darkred;
+  font-family: "Source Sans Pro", "Sans-serif";
+
+}
+
+
+/* container with the grid. all the page content. box sizing for limiting the box expanding */
+.my-content {
+
+  background-color: rgba(60, 60, 60, 0.50);
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  width: 70%;
+  height: 90%
+  box-sizing: content-box;
+  border-width: 2rem;
+  border-color: transparent;
+
+
+}
+
+/* all plain text content is formatted here */
+.my-text {
+
+  justify-content: center;
+  background-color: transparent;
+  text-align: justify;
+  font-family: "Source Sans Pro", "Sans-serif";
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+
+
+
+
+
+}
+
+h1 {
+
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 3rem;
+  font-family: "Source Sans Pro", "Sans-serif";
+}
+
+p {
+
+  color: #fff;
+  padding-bottom: 2rem;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 2em;
+  text-align: justify;
+
+
+
+}
+
+/* button for the user to launch dices */
+.my-dices {
+
+  color: #fff;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 300;
+  font-size: 1.3rem;
+  border-radius: 0%;
+  border-color: transparent;
+  background-color: rgba(143, 143, 143, 0.31);
+  box-sizing: border-box;
+  border-width: 0.1rem;
+  display: flex;
+  justify-content: center;
+
+
+
+}
+/* dices button on mouse hover. it changes the background color to red and animate the button to appear bigger */
+.my-dices:hover {
+
+  background-color: darkred;
+  transform: scale(1.1, 1.1);
+
+}
+
+
+.my-list {
+
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 300;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  background-image: none;
+  background-color: transparent !important;
+  border-radius: 0px;
+  border-color: transparent !important;
+
+
+
+
+}
+
+.my-stat {
+
+  color: #fff;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-size: 1.3rem;
+  font-weight: 300;
+  background-image: none;
+  background-color: transparent;
+  border-radius: 0px;
+  border-color: transparent;
+  background-image: none;
+  width: 20%;
+
+
+}
+
+.last {
+
+  padding-bottom: 2rem;
+}
+
+/* radio buttons styling */
+.my-radio {
+
+  color: #fff;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-size: 1.3rem;
+  font-weight: 300;
+  background-image: none;
+  background-color: transparent;
+  border-radius: 0px;
+  border-color: transparent;
+  background-image: none;
+  text-align: center;
+
+
+}
+
+/* characteristics styling */
+.my-item {
+
+  color: #fff;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-size: 1.3rem;
+  font-weight: 300;
+  background-image: none;
+  background-color: transparent;
+  border-radius: 0px;
+  border-color: transparent;
+  background-image: none;
+  display: flex;
+  justify-content: flex-start;
+
+
+}
+/* container of the dices and characteristic part */
+.my-choice {
+
+
+  display: webkit-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  background-color: rgba(60, 60, 60, 0.50);
+  background-image: none;
+  width: 85%;
+  box-sizing: content-box;
+  border-width: 1rem;
+  border-color: transparent;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+
+}
+
+/* dices images scaling */
+.onedice {
+
+  width: 20px;
+  height: 20px;
+}
+
+.my-play {
+
+  color: #fff;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 300;
+  font-size: 1.3rem;
+  border-radius: 0%;
+  border-color: transparent;
+  background-color: rgba(143, 143, 143, 0.31);
+  box-sizing: border-box;
+  border-width: 0.1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.my-play:hover {
+
+  background-color: darkred;
+  transform: scale(1.1, 1.1);
+
+}
+
+.go-on {
+
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  background-image: none;
+  background: transparent;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  box-sizing: content-box;
+
+
+}
+
+.my-align {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+
+img.avatar {
+  float: right;
+  border-radius: 50%;
+  margin-right: auto;
+
+}
+
+.login-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-basis: auto;
+    width: 600px;
+    height: 500px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    align-items: flex-start;
+    flex-flow: nowrap;
+    background: rgba(134, 134, 134, 0.37);
+}
+
+.login {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    width: 510px;
+    height: 310px;
+    border-radius: 1px;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -8px; right: -8px; bottom: -8px; left: -8px;
+      z-index: -1;
+      background: rgba(black, .08);
+      border-radius: 1px;
+    }
+}
+
+p.item {
+
+  font: 13px/20px Helvetica, 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: rgb(204, 204, 204);
+  flex-grow: 2;
+  align-self: flex-start;
+  padding: 20px;
+
+}
+
+
+p {
+
+  margin: 20px 0 0;
+}
+
+p: first-child {
+
+  margin-top: 0;
+}
+
+input[type=text], input[type=password] {       width: 278px; }
+
+p.sign-up {
+
+  line-height: 31px;
+  align-self: flex-start;
+  margin: 5px;
+  padding-top: 8px;
+  padding-left: 2px;
+  flex-grow: 1
+
+
+}
+
+
+
+p.submit {
+
+  line-height: 31px;
+  flex-grow: 2;
+  align-self: stretch;
+  padding-top: 20px;
+
+
+
+
+}
+
+.login-help {
+
+  margin: 20px 0 20px 0;
+  font-size: 10px;
+  color: antiquewhite;
+  text-align: center;
+  align-self: stretch;
+
+}
+
+
+  input {
+
+    font-family: Helvetica, 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+  }
+
+  input[type=text], input[type=password] {
+    margin: 5px;
+    padding: 0 10px;
+    width: 278px;
+    height: 34px;
+    color: #404040;
+    background: rgba(#444444, 0.77);
+
+
+
+
+  }
+
+  input[type=submit] {
+    margin: 5px;
+    padding: 0 18px;
+    height: 38px;
+    font-size: 15px;
+
+    color: black;
+    background: rgba(#394442, 0.77);
+
+    @include box-sizing(content-box); // Firefox sets this to border-box by default
+
+
+
+  }
+
+  .lt-ie9 {
+    input[type=text], input[type=password] { line-height: 34px; }
+  }
