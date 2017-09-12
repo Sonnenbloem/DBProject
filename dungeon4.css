@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+ch@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
 
 /* background of the whole page */
 html {
@@ -9,9 +9,21 @@ html {
   background-repeat: no-repeat;
   background-position: center !important;
   height: 100%;
+  background-color: black;
 
 }
 /* container of the whole page */
+
+body {
+
+   background: url("./cave-light-blue.bin") no-repeat center center fixed !important;
+   background-size: cover;
+   -webkit-background-size: cover !important;
+   background-repeat: no-repeat;
+   background-position: center !important;
+   height: 100%;
+   background-color: black;
+}
 
 .width {
 
@@ -27,6 +39,30 @@ html {
   clear: both;
 }
 
+
+
+::-webkit-scrollbar {
+
+   width: 10px;
+   background-color: rgba(60, 60, 60, 0.50);
+   overflow: auto;
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+   border-radius: 10px;
+   background-color: transparent;
+   overflow: auto;
+
+
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+   -webkit-box-shadow: inset 0 0 6px rgba(60, 60, 60, 0.50);
+   background-color: rgb(54, 54, 54);
+   overflow: auto;
+}
 
 
 .my-nav {
@@ -45,20 +81,34 @@ a {
 
 /* logout button style */
 
-.my-btn {
+.my-btn, .my-use {
 
-    color: gray;
     border-radius: 0%;
-    border-color: rgba(255, 255, 255, 0);
-    background-color: rgba(255, 255, 255, 0);
-    align-item= flex-end;
-
-
+    border-color: transparent;
+    background-color: transparent;
+    align-items: flex-end;
+    background-image: none;
+    font-family: "Source Sans Pro", "sans-serif";
 
 }
 
+.my-use {
+
+   font-size: 1.3rem;
+   font-weight: 400;
+   color: #fff;
+   padding-left: 2rem;
+
+}
+
+.my-btn {
+   color: gray;
+}
+
+
+
 /* logout button on mouse hover */
-.my-btn:hover {
+.my-btn:hover, .my-use:hover {
 
   color: darkred;
   font-family: "Source Sans Pro", "Sans-serif";
@@ -67,46 +117,163 @@ a {
 
 
 /* container with the grid. all the page content. box sizing for limiting the box expanding */
-.my-content {
+.my-content, .my-tcontent {
 
   background-color: rgba(60, 60, 60, 0.50);
   margin-top: 3rem;
-  padding-bottom: 1rem;
-  width: 70%;
+
+  width: 80%;
   height: 90%
   box-sizing: content-box;
   border-width: 2rem;
   border-color: transparent;
 
+}
+
+.my-content {
+
+  padding-bottom: 1rem;
+}
+
+.my-left, .my-right {
+
+  background-color: rgba(60, 60, 60, 0.50);
+  margin-top: 1rem;
+  border-width: 2rem;
+  border-color: transparent;
+  padding: 1rem;
+
 
 }
 
+.my-left {
+
+  margin-right: 0.5rem;
+}
+
+.my-right {
+
+  margin-left: 0.5rem;
+}
+
+.my-grid {
+
+  background-color: transparent;
+  background: transparent;
+  background-image: none;
+  display: flex;
+}
+
 /* all plain text content is formatted here */
-.my-text {
+.my-text, .my-invtitle, .my-object {
 
   justify-content: center;
   background-color: transparent;
   text-align: justify;
   font-family: "Source Sans Pro", "Sans-serif";
   display: flex;
-  padding-left: 1.5rem;
   padding-right: 1.5rem;
   box-sizing: border-box;
+  color: #fff;
 
+}
 
+.my-text {
+     padding-left: 1.5rem;
+}
+.my-object {
+     margin-left: 2rem !important;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-right: 1.5rem;
+     padding: 0;
+     text-align: justify;
+}
 
+.my-invtitle {
+
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  justify-content: center !important;
+  padding-left: 1.5rem;
+
+}
+
+.my-modtxt {
+
+  justify-content: center;
+  background-color: transparent;
+  text-align: center;
+  font-family: "Source Sans Pro", "Sans-serif";
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: content-box;
+  font-size: 1.5rem;
 
 
 }
 
+
+
+
+
+
+
 h1 {
 
-  color: #fff;
+  color: #fff !important;
   display: flex;
   justify-content: center;
   padding: 2rem;
   font-size: 3rem;
   font-family: "Source Sans Pro", "Sans-serif";
+}
+
+.my-title {
+
+  color: #fff !important;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 2rem !important;
+  font-size: 3rem;
+  font-family: "Source Sans Pro", "Sans-serif";
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+
+}
+
+.my-scroll {
+  overflow-y: scroll;
+  overflow: auto;
+
+}
+
+
+
+h5 {
+
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-family: "Source Sans Pro", "Sans-serif";
+
+}
+
+h6 {
+     text-transform: uppercase;
+     font-family: "Source Sans Pro", "Sans-serif";
+     font-weight: 400;
+     display: flex;
+     justify-content: flex-start;
+     color: #fff;
+     font-size: 1.4rem;
+     margin-top: 1rem;
+     padding-left: 2rem
+
 }
 
 p {
@@ -124,7 +291,7 @@ p {
 }
 
 /* button for the user to launch dices */
-.my-dices {
+.my-dices, .my-selection {
 
   color: #fff;
   font-family: "Source Sans Pro", "sans-serif";
@@ -136,7 +303,8 @@ p {
   box-sizing: border-box;
   border-width: 0.1rem;
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
+  align-items: center;
 
 
 
@@ -147,6 +315,19 @@ p {
   background-color: darkred;
   transform: scale(1.1, 1.1);
 
+}
+
+.my-selection {
+
+  width: 80%;
+  align-self: center;
+  margin: 0;
+}
+
+.my-selection:hover {
+
+  background-color: darkred;
+  transform: scale(1.1, 1.1);
 }
 
 
@@ -201,6 +382,66 @@ p {
   background-image: none;
   text-align: center;
 
+
+}
+
+.atta, .my-vert {
+
+  background-color: rgba(143, 143, 143, 0.31) !important;
+  border-radius: 0px;
+  border-color: transparent;
+  background-image: none;
+
+  font-family: "Source Sans Pro", "sans-serif";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #fff;
+
+}
+
+.atta {
+
+  width: 30%;
+}
+
+.my-vert {
+
+  width: 100% !important;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0 !important;
+  margin-top: 0.5rem !important;
+  padding: 1rem;
+
+}
+
+
+.my-buttons {
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+
+.my-modal {
+
+  background-color: rgba(0, 0, 0, 0.60) !important;
+  border-radius: 0px;
+  border-color: transparent;
+  background-image: none;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-size: 1.3rem;
+  font-weight: 300;
+  position: relative;
+  transform: translateY(50%);
+
+
+}
+
+.modstyle {
+
+  border: 0px;
 
 }
 

@@ -51,34 +51,296 @@
 
 </head>
 
-<body
+<body>
 
 
 
-
-  <div id="container" class="width">
+<div id="container" class="width">
 
     <!-- navbar - responsive??-->
+    <nav class="navbar width fixed-top navbar-expand-lg my-nav nav-fill justify-content-end" id="logout">
 
-      <nav class="navbar width fixed-top navbar-expand-lg my-nav nav-fill justify-content-end" id="logout">
-
-
-          <button class="btn my-btn" type="button">logout</button>
-
-
-      </nav>
-
+        <button class="btn my-btn" type="button">logout</button>
+    </nav>
 
       <!-- grid container - all the page code apart from the navbar is inside this -->
 
-      <div class="container my-content">
+      <!-- title container -->
+      <div class="container my-tcontent">
 
           <div class="row">
 
               <div class="col">
 
-                  <h1>Room1</h1>
+                  <h1 class="my-title">Room one</h1>
 
               </div>
 
           </div>
+
+      </div>
+
+      <!-- page content container - no background! -->
+      <div class="container my-grid">
+
+          <div class="row">
+
+            <!-- left side of page container - description and choices -->
+            <div class="col-lg-8 container my-left">
+
+                <!-- room description -->
+                <div class="row">
+
+                    <div class="col-lg justify-content-start">
+
+
+
+                        <p class="my-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </br>
+
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <!-- attack set of buttons -->
+                <div class="row justify-content-center my-buttons" id="set1">
+
+                    <!-- attack trigger button and modal -->
+                    <div class="col-lg">
+
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn my-selection" data-toggle="modal" data-target="#attack">
+                        Attack
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="attack">
+                          <div class="modal-dialog" role="document">
+                              <div class="modal-content my-modal">
+                                  <div class="modal-header justify-content-end modstyle">
+
+                                          <button type="button" class="close justify-content-end" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                  </div>
+                                  <div class="modal-body my-modtxt">
+                                      <p class="my-modtxt">Which enemy do you want to attack?</p>
+                                  </div>
+                                  <div class="modal-footer modstyle justify-content-center">
+                                      <button type="button" class="btn atta">Troll</button>
+                                      <button type="button" class="btn atta">Ogre</button>
+                                      <button type="button" class="btn atta">Other</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                    </div>
+
+                    <!-- run trigger button and modal -->
+                    <div class="col-lg">
+
+                    <!-- Button trigger modal -->
+                      <button type="button" class="btn my-selection" data-toggle="modal" data-target="#run">
+                        Run
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="run">
+                          <div class="modal-dialog" role="document">
+                              <div class="modal-content my-modal">
+                                  <div class="modal-header justify-content-end modstyle">
+
+                                      <button type="button" class="close justify-content-end" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body my-modtxt">
+                                      <p class="my-modtxt">Where do you want to go?</p>
+                                  </div>
+                                  <div class="modal-footer modstyle justify-content-center">
+                                      <button type="button" class="btn atta">Room A</button>
+                                      <button type="button" class="btn atta">Room B</button>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+
+                    <!-- object trigger button and modal - maybe remove -->
+                    <div class="col-lg">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn my-selection" data-toggle="modal" data-target="#item">
+                        Inventory
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="item">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content my-modal">
+                                <div class="modal-header justify-content-end modstyle">
+
+                                    <button type="button" class="close justify-content-end" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body my-modtxt">
+                                    <p class="my-modtxt">What do you want to do?</p>
+                                </div>
+                                <div class="modal-footer modstyle justify-content-center btn-group-vertical">
+                                    <button type="button" class="btn  my-vert">Use this</button>
+                                    <button type="button" class="btn  my-vert">Equip that</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+              </div>
+
+                </div>
+            </div>
+
+          <!-- right side of page container - inventory and stats -->
+          <div class="col-lg container my-right">
+
+               <!-- inventory title row-->
+               <div class="row my-invtitle">
+                    <h3>Inventory</h3>
+               </div>
+
+               <!-- objects in the inventory -->
+               <div class="row">
+
+                    <h6>Consumables</h6>
+
+               </div>
+               <div class="row">
+
+                              <!-- Button trigger modal -->
+                              <button class="btn my-use" type="button" data-toggle="modal" data-target="#use">Health up! potion</button>
+
+                              <!-- Modal -->
+                              <div class="modal fade" id="use">
+                                   <div class="modal-dialog" role="document">
+                                        <div class="modal-content my-modal">
+                                             <div class="modal-header justify-content-end modstyle">
+
+                                                 <button type="button" class="close justify-content-end" data-dismiss="modal" aria-label="Close">
+                                                   <span aria-hidden="true">&times;</span>
+                                                 </button>
+                                             </div>
+                                             <div class="modal-body my-modtxt">
+                                                  <p class="my-modtxt">Are you sure?
+                                                  Item will be destroyed upon use</p>
+
+                                             </div>
+                                             <div class="modal-footer modstyle justify-content-center">
+                                                  <button type="button" class="btn my-selection">YES, I want to use it</button>
+                                                  <button type="button" class="btn my-selection" data-dismiss="modal">NO, thank you</button>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+               </div>
+               <div class="row">
+
+                                   <p class="my-object">+10HP -1PER -2ATK +1DEF</p>
+
+
+               </div>
+
+               <div class="row">
+
+                    <h6>Wearables</h6>
+
+               </div>
+               <div class="row">
+
+                              <!-- Button trigger modal -->
+                              <button class="btn my-use" type="button" data-toggle="modal" data-target="#wear">Sword</button>
+
+                              <!-- Modal -->
+                              <div class="modal fade" id="wear">
+                                   <div class="modal-dialog" role="document">
+                                        <div class="modal-content my-modal">
+                                             <div class="modal-header justify-content-end modstyle">
+
+                                                 <button type="button" class="close justify-content-end" data-dismiss="modal" aria-label="Close">
+                                                   <span aria-hidden="true">&times;</span>
+                                                 </button>
+                                             </div>
+                                             <div class="modal-body my-modtxt">
+                                                  <p class="my-modtxt">Do you want to equip this? You will get +2ATK -1PER</p>
+
+                                             </div>
+                                             <div class="modal-footer modstyle justify-content-center">
+                                                  <button type="button" class="btn my-selection">YES, please</button>
+                                                  <button type="button" class="btn my-selection"data-dismiss="modal">NO, thank you</button>
+
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+               </div>
+               <div class="row">
+
+                                   <p class="my-object">+3HP -1PER +4ATK +1DEF</p>
+
+
+               </div>
+               <div class="row">
+
+                              <!-- Button trigger modal -->
+                              <button class="btn my-use" type="button" data-toggle="modal" data-target="#wear">Shield</button>
+
+               </div>
+               <div class="row">
+
+                                   <p class="my-object">+3HP -1PER +4ATK +1DEF</p>
+
+
+               </div>
+               <div class="row">
+
+                              <!-- Button trigger modal -->
+                              <button class="btn my-use" type="button" data-toggle="modal" data-target="#wear">Shield</button>
+
+               </div>
+               <div class="row">
+
+                                   <p class="my-object">+3HP -1PER +4ATK +1DEF</p>
+
+
+               </div>
+
+
+
+          </div>
+
+     </div>
+
+
+</div>
+
+
+
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>
